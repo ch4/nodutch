@@ -14,5 +14,6 @@ router.put('/api/things/:id', thing.put);
 
 
 router.get('/api/simplify/createCard', simplify.createCard);
+router.get('/api/simplify/chargeCard', simplify.chargeCard);
 
 module.exports = router;
