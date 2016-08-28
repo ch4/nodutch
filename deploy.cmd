@@ -101,7 +101,7 @@ echo ************** call node --version
 call node --version
 
 echo ************** call node --version
-call !NPM_CMD! install --production
+call !NPM_CMD! install
 
 :: 4. Run our grunt task
 
@@ -116,6 +116,7 @@ call !NPM_CMD! install grunt-cli
 ::
 :: Let's manually call grunt with the correct version of node (using the "!NODE_EXE!" variable)
 call "!NODE_EXE!" ./node_modules/gulp/bin/gulp.js
+echo ran gulp
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
