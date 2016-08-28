@@ -5,7 +5,7 @@
   "repository": "danivek/mean-starter-kit",
   "scripts": {
     "install": "node ./node_modules/gulp/bin/gulp.js",
-    "start": "node ./node_modules/gulp/bin/gulp.js",
+    "start": "node ./server/app.js",
     "test": "node ./node_modules/gulp/bin/gulp.js test",
     "dist": "node ./node_modules/gulp/bin/gulp.js dist",
     "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js"
