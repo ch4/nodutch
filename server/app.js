@@ -62,7 +62,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 // Enable CORS
-app.use(cors());
+// app.use(cors());
 
 // Bootstrap routes
 app.use(routes);

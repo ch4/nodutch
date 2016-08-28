@@ -14,7 +14,8 @@
     "config": "^1.16.0",
     "cors": "^2.7.1",
     "express": "^4.13.3",
-    "mongoose": "^4.4.7"
+    "mongoose": "^4.4.7",
+    "simplify-commerce": "^1.6.0"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
