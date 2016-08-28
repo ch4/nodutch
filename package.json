@@ -11,6 +11,7 @@
     "coveralls": "cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
+    "basic-auth": "^1.0.4",
     "body-parser": "^1.15.0",
     "config": "^1.16.0",
     "cors": "^2.7.1",

@@ -9,6 +9,7 @@ var config = require('config');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var basicAuth = require('basic-auth');
 
 var routes = require('./src/routes');
 
@@ -67,7 +68,27 @@ app.use(bodyParser.urlencoded({
 // Bootstrap routes
 app.use(routes);
 
+var auth = function (req, res, next) {
+  function unauthorized(res) {
+    res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    return res.send(401);
+  };
+
+  var user = basicAuth(req);
+
+  if (!user || !user.name || !user.pass) {
+    return unauthorized(res);
+  };
+
+  if (user.name === 'nodutch' && user.pass === 'nodutch') {
+    return next();
+  } else {
+    return unauthorized(res);
+  };
+};
+
 // Static files
+app.use('/', auth);
 app.use('/', express.static(__dirname + '/../client'));
 
 // Once database open, start server
