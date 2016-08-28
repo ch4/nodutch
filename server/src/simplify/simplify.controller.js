@@ -8,8 +8,8 @@ var Simplify = require("simplify-commerce"),
 
 
 exports.chargeCard = function(req, res, next) {
-  var user = req.params.user;
-  var amount = req.params.amount;
+  var user = req.query.user;
+  var amount = req.query.amount;
 
   // client.payment.create({
   //   amount : "1000",
@@ -26,7 +26,7 @@ exports.chargeCard = function(req, res, next) {
   // });
 
   client.payment.create({
-    amount : "3123",
+    amount : amount.toString(),
     description : "payment description",
     card : {
       expMonth : "11",

@@ -68,7 +68,7 @@ app.use(bodyParser.urlencoded({
 app.use(routes);
 
 // Static files
-app.use('/', express.static(__dirname + '/../public'));
+app.use('/', express.static(__dirname + '/../client'));
 
 // Once database open, start server
 mongoose.connection.once('open', function callback() {
