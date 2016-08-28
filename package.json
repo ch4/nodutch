@@ -4,6 +4,7 @@
   "version": "0.2.0",
   "repository": "danivek/mean-starter-kit",
   "scripts": {
+    "install": "node ./node_modules/gulp/bin/gulp.js",
     "start": "node ./node_modules/gulp/bin/gulp.js",
     "test": "node ./node_modules/gulp/bin/gulp.js test",
     "dist": "node ./node_modules/gulp/bin/gulp.js dist",
